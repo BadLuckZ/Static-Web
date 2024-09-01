@@ -162,6 +162,23 @@ main {
   }
 }
 
+.slides-scction {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.my-slides {
+}
+
+.filled-dot-nav {
+}
+
+.bordered-dot-nav {
+}
+
+/* =================================================== */
+
 footer {
   display: flex;
   flex-direction: column;
@@ -203,6 +220,7 @@ footer {
 .email-input {
   width: 100%;
   padding: 14px 0 14px 16px;
+  color: #010101;
 }
 
 .subscribe-btn {
