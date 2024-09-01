@@ -136,8 +136,32 @@ p {
   flex-direction: row-reverse;
 }
 
+.my-work-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.my-work-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 @media only screen and (max-width: 960px) {
   .feature-card {
     flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .my-work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .my-work-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
