@@ -131,3 +131,13 @@ p {
   font-weight: 300;
   text-align: left;
 }
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 960px) {
+  .feature-card {
+    flex-direction: column;
+  }
+}
