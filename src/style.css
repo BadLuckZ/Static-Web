@@ -68,3 +68,66 @@ h1 {
   color: var(--color--wd-greensolid);
   background: transparent;
 }
+
+main {
+  padding: 0 32px;
+}
+
+.divider {
+  color: var(--color--wd-greensolid);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 43.88px;
+  text-align: center;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 48px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  background-color: var(--color--wd-greensolid);
+  flex-grow: 1;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.feature-card {
+  display: flex;
+  gap: 24px;
+}
+
+.feature-card > img {
+  flex: 30%;
+}
+
+.feature-card > div {
+  background-color: #2d2d2d;
+  padding: 24px;
+  gap: 16px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card-title {
+  font-size: 32px;
+  text-align: left;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.feature-card-content {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 300;
+  text-align: left;
+}
