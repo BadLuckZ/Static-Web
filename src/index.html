@@ -15,6 +15,7 @@
       <h1>WEB DEVELOPMENT <br />BOOTCAMP</h1>
       <p class="hero-section-subtitle">MY PHOTO GALLERY</p>
     </header>
+
     <main>
       <p class="divider">Features</p>
       <section style="display: flex; gap: 24px; flex-direction: column" ;>
@@ -49,6 +50,7 @@
           </div>
         </div>
       </section>
+
       <p class="divider">My Work</p>
       <section class="my-work-grid">
         <img src="../assets/grid/image-bootcamp-1.png" alt="image1" srcset="" />
@@ -58,20 +60,23 @@
         <img src="../assets/grid/image-bootcamp-5.png" alt="image5" srcset="" />
         <img src="../assets/grid/image-bootcamp-6.png" alt="image6" srcset="" />
       </section>
+
       <p class="divider">More Photos</p>
-      <section class="slides-section">
+      <section class="section-content slides-section">
         <div class="my-slides">
-          <img src="../assets/slider/slide1.jpg" alt="image1" srcset="" />
-          <img src="../assets/slider/slide2.jpg" alt="image2" srcset="" />
-          <img src="../assets/slider/slide3.jpg" alt="image3" srcset="" />
-          <img src="../assets/slider/slide4.jpg" alt="image4" srcset="" />
+          <img src="../assets/slider/slide1.jpg" alt="slide1" />
+          <img src="../assets/slider/slide2.jpg" alt="slide2" />
+          <img src="../assets/slider/slide3.jpg" alt="slide3" />
+          <img src="../assets/slider/slide4.jpg" alt="slide4" />
         </div>
-        <div class="left-chevron" onclick="changeSlide(-1)">
-          <i class="fa-solid fa-chevron-left fa-2xl"></i>
-        </div>
-        <div class="right-chevron" onclick="changeSlide(1)">
-          <i class="fa-solid fa-chevron-right fa-2xl"></i>
-        </div>
+
+        <a class="left-chevron" onclick="changeSlide(-1)"
+          ><i class="fa-solid fa-chevron-left fa-2xl"></i
+        ></a>
+        <a class="right-chevron" onclick="changeSlide(1)"
+          ><i class="fa-solid fa-chevron-right fa-2xl"></i
+        ></a>
+
         <div class="dot-navs-container">
           <div onclick="goToSlide(0)"></div>
           <div onclick="goToSlide(1)"></div>
@@ -80,6 +85,7 @@
         </div>
       </section>
     </main>
+
     <footer>
       <div class="footer-content">
         <div>
@@ -140,7 +146,6 @@
       slideIndex = n;
       showSlide(slideIndex);
     }
-
     function changeSlide(n) {
       slideIndex += n;
       showSlide(slideIndex);
@@ -148,21 +153,23 @@
 
     function showSlide(n) {
       const slideImages = document.querySelectorAll(".my-slides > img");
-      const dotNavs = document.querySelectorAll(".dot-navs-container > div");
-      if (n >= dotNavs.length) {
+      const dotNavigations = document.querySelectorAll(
+        ".dot-navs-container > div"
+      );
+      if (n >= slideImages.length) {
         slideIndex = 0;
       }
-      if (n <= 0) {
+      if (n < 0) {
         slideIndex = slideImages.length - 1;
       }
       for (let i = 0; i < slideImages.length; i++) {
         slideImages[i].style.display = "none";
-        dotNavs[i].classList.remove("filled-dot-nav");
-        dotNavs[i].classList.add("bordered-dot-nav");
+        dotNavigations[i].classList.remove("filled-dot-nav");
+        dotNavigations[i].classList.add("bordered-dot-nav");
       }
       slideImages[slideIndex].style.display = "block";
-      dotNavs[slideIndex].classList.add("filled-dot-nav");
-      dotNavs[slideIndex].classList.remove("bordered-dot-nav");
+      dotNavigations[slideIndex].classList.add("filled-dot-nav");
+      dotNavigations[slideIndex].classList.remove("bordered-dot-nav");
     }
 
     function alertEmail() {
