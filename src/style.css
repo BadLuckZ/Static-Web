@@ -25,16 +25,15 @@
 * {
   --color-primary: #def81d;
   --color-wd-white: #ffffff;
-  --color-wd-grey: #999999;
   --color-wd-darkgrey: #2d2d2d;
   --color-wd-black: #080808;
 
-  color: #ffffff;
+  color: var(--color-wd-white);
   font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: #080808;
+  background-color: var(--color-wd-black);
   padding: 0;
   margin: 0;
 }
@@ -110,7 +109,7 @@ main {
 }
 
 .feature-card > div {
-  background-color: #2d2d2d;
+  background-color: var(--color-wd-darkgrey);
   padding: 24px;
   gap: 16px;
 
@@ -279,7 +278,7 @@ footer {
 
 .subscribe-btn {
   background-color: var(--color-primary);
-  color: #010101;
+  color: var(--color-wd-black);
   display: flex;
   justify-content: center;
   align-items: center;
